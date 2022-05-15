@@ -1,4 +1,4 @@
-import ExpenseItem from "./components/ExpenseItem";
+import ExpenseItem from "./components/Expenses/ExpenseItem";
 import logo from "./logo.svg";
 
 function App() {
@@ -39,7 +39,6 @@ function App() {
 
   return (
     <div>
-      <h2>Let's get started!</h2>
       {expenseItems}
     </div>
   );
