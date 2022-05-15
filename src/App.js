@@ -1,4 +1,5 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
+import NewExpense from "./components/NewExpense/NewExpense";
 import logo from "./logo.svg";
 
 function App() {
@@ -29,6 +30,8 @@ function App() {
     },
   ];
 
+  const addExpenseHandler = expense => console.log(expense);
+
   const expenseItems = expenses.map((item) => (
     <ExpenseItem 
         title={item.title} 
@@ -39,6 +42,7 @@ function App() {
 
   return (
     <div>
+      <NewExpense onAddExpense={addExpenseHandler} />
       {expenseItems}
     </div>
   );
