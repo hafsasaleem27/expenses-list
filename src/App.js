@@ -1,4 +1,4 @@
-import ExpenseItem from "./components/Expenses/ExpenseItem";
+import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
@@ -31,18 +31,10 @@ function App() {
 
   const addExpenseHandler = expense => console.log(expense);
 
-  const expenseItems = expenses.map((item) => (
-    <ExpenseItem 
-        title={item.title} 
-        amount={item.amount}
-        date={item.date}
-    />
-  ));
-
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler} />
-      {expenseItems}
+      <Expenses items={expenses} />
     </div>
   );
 }
