@@ -1,6 +1,5 @@
 import ExpenseItem from "./components/Expenses/ExpenseItem";
 import NewExpense from "./components/NewExpense/NewExpense";
-import logo from "./logo.svg";
 
 function App() {
   const expenses = [
