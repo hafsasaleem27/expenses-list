@@ -1,5 +1,7 @@
-import ExpenseItem from "./components/Expenses/ExpenseItem";
-import logo from "./logo.svg";
+import React from "react";
+
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const expenses = [
@@ -29,17 +31,12 @@ function App() {
     },
   ];
 
-  const expenseItems = expenses.map((item) => (
-    <ExpenseItem 
-        title={item.title} 
-        amount={item.amount}
-        date={item.date}
-    />
-  ));
+  const addExpenseHandler = expense => console.log(expense);
 
   return (
     <div>
-      {expenseItems}
+      <NewExpense onAddExpense={addExpenseHandler} />
+      <Expenses items={expenses} />
     </div>
   );
 }
