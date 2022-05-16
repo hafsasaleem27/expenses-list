@@ -21,6 +21,11 @@ function ExpenseForm(props) {
     const submitHandler = (event) => {
         event.preventDefault();
 
+        // prevent empty expense from getting added to the list
+        if (enteredTitle.trim() === '' && enteredAmount.trim() === '' && enteredDate.trim() === '') {
+            return;
+        }
+
         const expenseData = {
             title: enteredTitle,
             amount: enteredAmount,
